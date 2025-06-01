@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClickSavvy | Protect Yourself 102</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f6dada;
+      font-family: 'Playfair Display', serif;
+      color: #1e1e1e;
+    }
+
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-radius: 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #ef7d87;
+    }
+
+    .logo em {
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e1e1e;
+      margin: 0 6px;
+      font-weight: 500;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #ef7d87;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: #f15e68;
+      color: black;
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .card ul, .card ol {
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .card ul li, .card ol li {
+      margin-bottom: 6px;
+    }
+
+    .icon {
+      text-align: right;
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <div class="logo">Click<em>Savvy</em></div>
+      <div class="nav-links">
+        <a href="#">Home</a> |
+        <a href="#">Cyber Threats 101</a> |
+        <a href="#">Feedback Form</a>
+      </div>
+    </header>
+
+    <h1>Protect Yourself 102</h1>
+    <h2>Keeping Your Information Safe</h2>
+
+    <div class="cards">
+      <!-- Strong Password Card -->
+      <div class="card">
+        <h3>Strong Password</h3>
+        <p>Use unique passwords with 12+ characters. Try using a password manager. Make sure it is not unique to you.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+          <li>Mounta!nsandBerr!es1@</li>
+          <li>W@alk!ng!snotfun08</li>
+        </ul>
+        <div class="icon">🔒</div>
+      </div>
+
+      <!-- Antivirus Software Card -->
+      <div class="card">
+        <h3>Antivirus Software</h3>
+        <p>Keep your device protected from malware and viruses with reliable software and by downloading an Antivirus Software.</p>
+        <p><strong>Suggestions:</strong></p>
+        <ul>
+          <li>Windows Defender (built-in for Windows)</li>
+          <li>Norton</li>
+          <li>McAfee</li>
+        </ul>
+        <div class="icon">🛡️</div>
+      </div>
+
+      <!-- 2FA Card -->
+      <div class="card">
+        <h3>2-Factor Authorization</h3>
+        <p>Add an extra layer of protection to your accounts with 2FA.</p>
+        <ol>
+          <li>Go to your account settings<br>(Google, Instagram, TikTok, email, etc.)</li>
+          <li>Look for “Security” or “Two-Factor Authentication”</li>
+          <li>Choose your method
+            <ul>
+              <li>Text message 📲</li>
+              <li>Authenticator app (like Google Authenticator or Duo)</li>
+              <li>Email confirmation ✉️</li>
+            </ul>
+          </li>
+          <li>Follow the setup instructions</li>
+          <li>Scan a QR code or enter your phone number</li>
+          <li>Save your backup codes!<br><em>(These help if you ever lose your phone)</em></li>
+        </ol>
+        <div class="icon">📱</div>
+      </div>
+    </div>
+
+    <footer>
+      Contact Info: 803.662.4980 · info@clicksavvy.com
+    </footer>
+  </div>
+</body>
+</html>
