@@ -1,0 +1,204 @@
+/* styles.css for ClickSavvy - External Stylesheet */
+
+/* === Base Styles === */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6dada; /* Light pink background */
+  font-family: 'Playfair Display', serif;
+  color: #1e1e1e;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ef7d87;
+}
+
+.logo em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e1e1e;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  text-align: center;
+  color: #ef7d87;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* === Cards (Cyber Threats + Protection Pages) === */
+.card {
+  background-color: #f15e68;
+  color: black;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card ul,
+.card ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+
+.icon {
+  text-align: right;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* === Form Page === */
+.left-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.right-section {
+  background-color: #f3f0ff;
+  border-radius: 16px;
+  padding: 30px;
+  flex: 1;
+  min-width: 340px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  background-color: #e6e6e6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.stars {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.stars span:hover,
+.stars span:hover ~ span {
+  color: #ffd700;
+}
+
+.error {
+  font-size: 12px;
+  color: #ef5c5c;
+  margin-top: 4px;
+}
+
+button {
+  background-color: #b86fff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* === Responsive Tweaks === */
+@media (max-width: 900px) {
+  .cards, .threats, .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
