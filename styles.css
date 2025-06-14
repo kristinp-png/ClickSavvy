@@ -202,3 +202,23 @@ footer {
     text-align: left;
   }
 }
+
+/* === Quote Generator Section === */
+#inspiration {
+  background-color: #fce4ec;
+  border: 2px dashed #ef7d87;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 700px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#quote-display {
+  font-style: italic;
+  color: #5c2c35;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
