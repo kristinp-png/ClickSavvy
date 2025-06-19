@@ -1,39 +1,26 @@
-/* styles.css for ClickSavvy - External Stylesheet */
+/* ClickSavvy Unified Stylesheet */
 
-/* === Base Styles === */
 body {
   margin: 0;
-  padding: 0;
-  background-color: #f6dada; /* Light pink background */
   font-family: 'Playfair Display', serif;
   color: #1e1e1e;
+  background-color: #fff;
 }
 
-.main-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  border-radius: 40px;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-/* === Header === */
 header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 40px;
-  width: 100%;
+  align-items: center;
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   color: #ef7d87;
 }
@@ -43,97 +30,96 @@ header {
   font-weight: 500;
 }
 
-.nav-links a {
+nav {
+  font-size: 16px;
+}
+
+nav a {
+  margin: 0 10px;
   text-decoration: none;
   color: #1e1e1e;
-  margin: 0 6px;
   font-weight: 500;
 }
 
-/* === Typography === */
-h1, h2, h3 {
+section#intro {
+  background: #fff0f5;
+  padding: 60px 20px;
   text-align: center;
+}
+
+section#intro h1 {
+  font-size: 36px;
   color: #ef7d87;
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 36px;
+section#intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
 }
 
-h2 {
-  font-size: 28px;
-  font-weight: 600;
+#features, #threats {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-h3 {
+.feature-card, .threat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.feature-card h3, .threat-card h3 {
+  margin: 10px 0;
+  color: #ef7d87;
+}
+
+.feature-card p, .threat-card p, .tip p {
+  font-size: 16px;
+}
+
+.threat-card ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.tip {
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tip h3 {
+  color: #ef7d87;
+  margin-bottom: 8px;
   font-size: 22px;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 20px 0;
-  text-align: center;
-}
-
-/* === Cards (Cyber Threats + Protection Pages) === */
-.card {
-  background-color: #f15e68;
-  color: black;
-  width: 300px;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.card ul,
-.card ol {
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-.card li {
-  margin-bottom: 6px;
-}
-
-.icon {
-  text-align: right;
-  font-size: 24px;
-  margin-top: 10px;
-}
-
-/* === Form Page === */
-.left-section {
-  flex: 1;
-  min-width: 280px;
-}
-
-.right-section {
-  background-color: #f3f0ff;
-  border-radius: 16px;
+form {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fce4ec;
   padding: 30px;
-  flex: 1;
-  min-width: 340px;
-}
-
-.form-section h2 {
-  font-size: 20px;
-  background-color: #e6e6e6;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  text-align: center;
+  border-radius: 16px;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+label {
   display: block;
-  font-size: 16px;
+  font-weight: 500;
   margin-bottom: 6px;
 }
 
@@ -141,84 +127,43 @@ input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
-  font-size: 15px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-.stars {
-  font-size: 20px;
-  color: #ccc;
+.rating {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
 }
 
-.stars span:hover,
-.stars span:hover ~ span {
-  color: #ffd700;
+.rating input {
+  display: none;
 }
 
-.error {
-  font-size: 12px;
-  color: #ef5c5c;
-  margin-top: 4px;
-}
-
-button {
-  background-color: #b86fff;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+.rating label {
   cursor: pointer;
 }
 
-/* === Footer === */
+.rating input:checked ~ label {
+  color: #ffd700;
+}
+
+button {
+  background-color: #ef7d87;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   font-size: 14px;
+  padding: 30px 0;
+  background: #f6dada;
   margin-top: 40px;
-  width: 100%;
-}
-
-/* === Responsive Tweaks === */
-@media (max-width: 900px) {
-  .cards, .threats, .main-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    margin-top: 10px;
-    text-align: left;
-  }
-}
-
-/* === Quote Generator Section === */
-#inspiration {
-  background-color: #fce4ec;
-  border: 2px dashed #ef7d87;
-  padding: 20px;
-  margin: 40px auto;
-  max-width: 700px;
-  text-align: center;
-  font-family: 'Georgia', serif;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-#quote-display {
-  font-style: italic;
-  color: #5c2c35;
-  font-size: 20px;
-  margin-bottom: 20px;
 }

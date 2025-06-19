@@ -1,149 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClickSavvy | Stay Safe Online</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f6dada;
-      font-family: 'Playfair Display', serif;
-      color: #1e1e1e;
-    }
-
-    .main-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #f6dada;
-      border-radius: 40px;
-      padding: 40px 30px;
-      box-sizing: border-box;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 40px;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #ef7d87;
-    }
-
-    .logo em {
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .nav-links {
-      text-align: right;
-      color: #1e1e1e;
-    }
-
-    .nav-links a {
-      color: #1e1e1e;
-      text-decoration: none;
-      margin: 0 5px;
-      font-weight: 500;
-    }
-
-    h1 {
-      text-align: center;
-      color: #ef7d87;
-      font-size: 36px;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 30px;
-      font-weight: 600;
-      color: #1e1e1e;
-    }
-
-    p {
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 20px 0;
-    }
-
-    p strong em {
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 15px;
-      color: #333;
-    }
-
-    /* Responsive tweak */
-    @media (max-width: 600px) {
-      .main-container {
-        padding: 30px 20px;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        margin-top: 10px;
-        text-align: left;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_redesigned.css" />
 </head>
 <body>
-  <div class="main-container">
-    <header>
-      <div class="logo">Click<em>Savvy</em></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a> |
-        <a href="cyberthreats101.html">Cyber Threats 101</a> |
-        <a href="protectyourself102.html">Protect Yourself 102</a> |
-        <a href="forms.html">Feedback Form</a>
-      </div>
-    </header>
-    
+  <header>
+    <div class="logo">Click<em>Savvy</em></div>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="cyberthreats101.html">Cyber Threats 101</a>
+      <a href="protectyourself102.html">Protect Yourself 102</a>
+      <a href="forms.html">Feedback</a>
+    </nav>
+  </header>
 
-    <h1>Stay Safe Online</h1>
-    <h2>About this Page</h2>
+  <section id="intro">
+    <h1>Stay Safe. Stay Stylish. Stay ClickSavvy.</h1>
+    <p>ClickSavvy is your go-to guide for online safety. Built for beginners, dreamers, and digital divas everywhere 💻🌸</p>
+  </section>
 
-    <p><strong>Click<em>Savvy</em></strong> was created to help everyday internet users feel confident and safe online. Whether you’re new to cybersecurity or just looking for simple tips, this site breaks it all down no jargon, no pressure.</p>
+  <section id="features">
+    <div class="feature-card">
+      <div role="img" aria-label="Stop emoji">🛑</div>
+      <h3>Cyber Threats 101</h3>
+      <p>Learn to identify common scams, phishing attempts, and malware.</p>
+    </div>
+    <div class="feature-card">
+      <div role="img" aria-label="Shield emoji">🛡️</div>
+      <h3>Protect Yourself 102</h3>
+      <p>Build your digital armor — passwords, privacy, and prevention tips.</p>
+    </div>
+    <div class="feature-card">
+      <div role="img" aria-label="Chat emoji">💬</div>
+      <h3>Give Feedback</h3>
+      <p>Help us improve ClickSavvy by sharing your thoughts!</p>
+    </div>
+  </section>
 
-    <p>Explore resources, learn to spot threats, and start protecting your personal info today. We believe staying safe online should be smart, simple, and yes a little bit stylish. 💻🌸</p>
+  <section id="quote">
+    <h2>Quote of the Moment</h2>
+    <p id="quote-display">Loading a fabulous quote...</p>
+    <button onclick="getRandomQuote()">Get a new quote</button>
+  </section>
 
-    <p>We’ve organized everything into two helpful sections:<br>
-      <strong>Cyber Threats 101</strong>, where you’ll learn what to watch out for, and<br>
-      <strong>Protect Yourself 102</strong>, where you’ll get tools and advice to stay secure.<br>
-      💬 Don’t forget to visit the Feedback page to share your thoughts or ask questions — we’d love to hear from you!
-    </p>
-    <section id="inspiration">
-      <h2>Quote of the Moment</h2>
-      <p id="quote-display">Loading a fabulous quote...</p>
-      <button onclick="getRandomQuote()">Get a new quote</button>
-    </section>
+  <footer>
+    Contact Info: 803.662.4980 · info@clicksavvy.com
+  </footer>
 
-    <footer>
-      Contact Info: 803.662.4980 · info@clicksavvy.com
-    </footer>
-  </div>
-  <script src="random-quotes.js"></script>
+  <script>
+    const quotes = [
+      "Stay savvy, stay safe online.",
+      "Confidence is your best password.",
+      "Click smart. Live smarter.",
+      "Secure your future with strong passwords.",
+      "Digital queens protect their data!"
+    ];
+
+    function getRandomQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote-display").textContent = quotes[randomIndex];
+    }
+
+    window.onload = getRandomQuote;
+  </script>
 </body>
 </html>

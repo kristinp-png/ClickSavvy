@@ -2,174 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClickSavvy | Cyber Threats 101</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f6dada;
-      font-family: 'Playfair Display', serif;
-      color: #1e1e1e;
-    }
-
-    .main-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      border-radius: 40px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 40px;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #ef7d87;
-    }
-
-    .logo em {
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #1e1e1e;
-      margin: 0 6px;
-      font-weight: 500;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      color: #ef7d87;
-      margin-bottom: 40px;
-    }
-
-    .threats {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .card {
-      background-color: #f15e68;
-      color: black;
-      width: 300px;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: left;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .card h2 {
-      font-size: 24px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
-
-    .card ul {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .card ul li {
-      margin-bottom: 6px;
-    }
-
-    .icon {
-      text-align: right;
-      font-size: 24px;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .threats {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_redesigned.css" />
 </head>
 <body>
-  <div class="main-container">
-    <header>
-        <div class="logo">Click<em>Savvy</em></div>
-        <div class="nav-links">
-          <a href="index.html">Home</a> |
-          <a href="cyberthreats101.html">Cyber Threats 101</a> |
-          <a href="protectyourself102.html">Protect Yourself 102</a> |
-          <a href="forms.html">Feedback Form</a>
-        </div>
-      </header>
-      
+  <header>
+    <div class="logo">Click<em>Savvy</em></div>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="cyberthreats101.html">Cyber Threats 101</a>
+      <a href="protectyourself102.html">Protect Yourself 102</a>
+      <a href="forms.html">Feedback</a>
+    </nav>
+  </header>
 
+  <section id="intro">
     <h1>Cyber Threats 101</h1>
+    <p>Learn to recognize common online threats so you can protect your data and your peace of mind.</p>
+  </section>
 
-    <div class="threats">
-      <!-- Phishing Card -->
-      <div class="card">
-        <h2>Phishing</h2>
-        <p><strong>Phishing</strong> – Fake emails and websites that try to steal your personal info. A word to the wise. If it looks suspicious it most likely is!</p>
-        <p><strong>Examples:</strong></p>
-        <ul>
-          <li>Fake Email from Your Bank</li>
-          <li>Package Delivery Scam</li>
-          <li>Fake Social Media DMs</li>
-          <li>Tech Support Impersonation</li>
-        </ul>
-        <div class="icon">🖥️</div>
-      </div>
-
-      <!-- Ransomware Card -->
-      <div class="card">
-        <h2>Ransomware</h2>
-        <p><strong>Ransomware</strong> – Malicious software that blocks access to your files until a ransom is paid.</p>
-        <ul>
-          <li>Email Attachment Trap</li>
-          <li>Home Computer Attack</li>
-          <li>Fake Software Updates</li>
-        </ul>
-        <div class="icon">🔐</div>
-      </div>
-
-      <!-- Social Engineering Card -->
-      <div class="card" style="width: 95%;">
-        <h2>Social Engineering</h2>
-        <p><strong>Social Engineering</strong> – Tricking people into revealing sensitive information.</p>
-        <ul>
-          <li>Fake Tech Support Call</li>
-          <li>Emotional E-mail/ Text Message Traps</li>
-          <li>The “CEO Request” Email</li>
-        </ul>
-      </div>
+  <section id="threats">
+    <div class="threat-card">
+      <h3>Phishing 🐟</h3>
+      <p>Fake emails or websites trying to steal your personal info.</p>
+      <ul>
+        <li>Fake bank alerts</li>
+        <li>Delivery scams</li>
+        <li>Phony DMs</li>
+        <li>“Reset your password” traps</li>
+      </ul>
     </div>
 
-    <footer>
-      Contact Info: 803.662.4980 · info@clicksavvy.com
-    </footer>
-  </div>
+    <div class="threat-card">
+      <h3>Ransomware 💸</h3>
+      <p>Malware that locks your files until a payment is made.</p>
+      <ul>
+        <li>Email attachment viruses</li>
+        <li>Fake software updates</li>
+        <li>System freeze attacks</li>
+      </ul>
+    </div>
+
+    <div class="threat-card">
+      <h3>Social Engineering 🎭</h3>
+      <p>Tricks that manipulate you into giving away info.</p>
+      <ul>
+        <li>Fake tech support</li>
+        <li>Emotional manipulation</li>
+        <li>“Urgent CEO request” emails</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Contact Info: 803.662.4980 · info@clicksavvy.com
+  </footer>
 </body>
 </html>

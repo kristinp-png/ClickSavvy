@@ -2,199 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClickSavvy | Feedback</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f6dada;
-      font-family: 'Playfair Display', serif;
-      color: #1e1e1e;
-    }
-
-    .main-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      border-radius: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 40px;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
-      color: #ef7d87;
-    }
-
-    .logo em {
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #1e1e1e;
-      margin: 0 6px;
-      font-weight: 500;
-    }
-
-    .left-section {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .left-section h1 {
-      font-size: 32px;
-      color: #ef7d87;
-      margin-bottom: 20px;
-    }
-
-    .left-section p {
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
-
-    .right-section {
-      background-color: #f3f0ff;
-      border-radius: 16px;
-      padding: 30px;
-      flex: 1;
-      min-width: 340px;
-    }
-
-    .form-section h2 {
-      font-size: 20px;
-      background-color: #e6e6e6;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .stars {
-      font-size: 20px;
-      color: #ccc;
-    }
-
-    .stars span:hover,
-    .stars span:hover ~ span {
-      color: #ffd700;
-    }
-
-    .error {
-      font-size: 12px;
-      color: #ef5c5c;
-      margin-top: 4px;
-    }
-
-    button {
-      background-color: #b86fff;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    footer {
-      width: 100%;
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .main-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .left-section,
-      .right-section {
-        width: 100%;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_redesigned.css" />
 </head>
 <body>
-  <div class="main-container">
-    <header>
-      <div class="logo">Click<em>Savvy</em></div>
-      <div class="nav-links">
-        <a href="index.html">Home</a> |
-        <a href="cyberthreats101.html">Cyber Threats 101</a> |
-        <a href="protectyourself102.html">Protect Yourself 102</a> |
-        <a href="forms.html">Feedback Form</a>
-      </div>
-    </header>    
+  <header>
+    <div class="logo">Click<em>Savvy</em></div>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="cyberthreats101.html">Cyber Threats 101</a>
+      <a href="protectyourself102.html">Protect Yourself 102</a>
+      <a href="forms.html">Feedback</a>
+    </nav>
+  </header>
 
-    <div class="left-section">
-      <h1>We’d Love Your Feedback</h1>
-      <p>Let us know how we can make <strong><em>ClickSavvy</em></strong> even better.!</p>
-      <p>Contact us if you have any questions</p>
+  <section id="intro">
+    <h1>We’d Love Your Feedback</h1>
+    <p>Tell us how we’re doing and how we can improve ClickSavvy!</p>
+  </section>
+
+  <form onsubmit="return handleSubmit(event)">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
     </div>
 
-    <div class="right-section">
-      <div class="form-section">
-        <h2>Thank you for your feed back!</h2>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="example@email.com">
-          <div class="error">Type an error message</div>
-        </div>
-        <div class="form-group">
-          <label>Your overall satisfaction</label>
-          <div class="stars">
-            ★ ★ ★ ★ ★
-          </div>
-          <div class="error">Type an error message</div>
-        </div>
-        <div class="form-group">
-          <label>Please leave your feedback below</label>
-          <textarea rows="4" placeholder="Type here..."></textarea>
-          <div class="error">Type an error message</div>
-        </div>
-        <button type="submit">Submit ✈️</button>
+    <div class="form-group">
+      <label>Overall Satisfaction</label>
+      <div class="rating">
+        <input type="radio" id="star5" name="satisfaction" value="5" required><label for="star5">★</label>
+        <input type="radio" id="star4" name="satisfaction" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="satisfaction" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="satisfaction" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="satisfaction" value="1"><label for="star1">★</label>
       </div>
     </div>
 
-    <footer>
-      Contact Info: 803.662.4980 · info@clicksavvy.com
-    </footer>
-  </div>
+    <div class="form-group">
+      <label for="message">Your Feedback</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type here..." required></textarea>
+    </div>
+
+    <button type="submit">Submit ✈️</button>
+  </form>
+
+  <footer>
+    Contact Info: 803.662.4980 · info@clicksavvy.com
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert('Thank you for your feedback!');
+      return false;
+    }
+  </script>
 </body>
 </html>
