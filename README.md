@@ -12,3 +12,6 @@ Upload the contents of this directory to the root of a GitHub repository and ena
 
 ## Testing
 Check all navigation, each quiz/scam answer, restart, password display, checklist persistence and feedback validation. External resource links should be checked before release.
+
+## Version 3.0
+Adds six Academy lessons, an eight-habit self-assessment, six scam scenarios, searchable glossary, local achievement badges, dark mode and starter journal articles. Progress and theme are stored locally when available. No accounts or backend. Scores are educational, not security audits. Feedback remains a demo. Starter articles and new features were AI-assisted; review and test before publication.
